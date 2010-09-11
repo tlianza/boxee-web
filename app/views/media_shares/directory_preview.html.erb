@@ -1,0 +1,7 @@
+<%unless @files.empty? && @directories.empty?%>
+<%=render(:partial=>'file', :collection=>@files, :locals=>{:css_class=>'smallbox'})%>
+<%=render(:partial=>'directory', :collection=>@directories, :locals=>{:css_class=>'smallbox'})%>
+
+<%else%>
+[empty]
+<%end%>

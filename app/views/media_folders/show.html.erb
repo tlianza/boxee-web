@@ -1,0 +1,10 @@
+<h1>Media Folder</h1>
+Path: <%=@media_folder.path%>
+<br />
+<%unless @media_folder.current_media_share.nil?%>
+	 Media Share: <%=link_to @media_folder.current_media_share, :controller=>:media_shares,  :action=>:show, :id=>@media_folder.current_media_share.id, :dir=>@media_folder.subdirectory_of_media_share%>
+<%else%>
+	[Unknown <%=link_to 'media share', media_shares_path%>.  It may have been deleted?]
+<%end%>
+<br /><br />
+<%= link_to 'Back', media_folders_path %>

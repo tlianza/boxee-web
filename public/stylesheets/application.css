@@ -1,0 +1,19 @@
+body { font-family: arial, verdana, sans-serif; font-size: 0.85em;}
+h1 { margin: 0;}
+
+.smaller { font-size: 85%; }
+.breadcrumbs { font-face: bold; font-size: .8em;}
+
+#topmenu, #topmenu li { display: inline; }
+#topmenu li { margin: 0 5px;}
+#topmenu li a { font-weight: bold;}
+
+/* images and files */
+.file { float: left; margin: 5px; text-align: center; overflow:hidden;}
+iframe.file { padding: 0;}
+.directory { background-color: grey; opacity: 50%;}
+.smallbox {max-width: 100px; max-height: 100px; border:0;}
+ .file.smallbox {width: 100px; height: 100px; margin: 1px 0;}
+.medbox  {max-width: 200px; max-height: 200px; border:0;}
+ .file.medbox {width: 200px; height: 200px;}
+ iframe.medbox { height: 200px;}

@@ -1,0 +1,10 @@
+<%
+_css_class='medbox' 
+_css_class = css_class if defined?css_class
+%>
+<div class="file directory <%=_css_class%>">
+	<%=link_to(directory, {:action=>:show, :id=>@media_share.id, :dir=>directory}, {:target=>'_top'})%>
+<%if _css_class == 'medbox'%>
+	<iframe class="<%=_css_class%>" scrolling="no" src="<%=url_for(:action=>:directory_preview, :id=>@media_share.id, :dir=>directory)%>"></iframe>
+<%end%>
+</div>

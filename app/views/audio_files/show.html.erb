@@ -1,0 +1,7 @@
+<span class="breadcrumbs"><%= link_to 'All', audio_files_path %> &gt; <%=link_to @audio_file.artist, @audio_file.artist, :title=>'Artist'%> &gt; <%=link_to @audio_file.album, @audio_file.album, :title=>'Album'%> &gt; </span>
+<h1><%=@audio_file.title%></h1>
+
+<%=link_to('Play!', :action=>:play, :id=>@audio_file.id)%>
+
+<br />
+<%= link_to 'Back', audio_files_path %>

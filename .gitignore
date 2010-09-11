@@ -1,0 +1,7 @@
+#gitignore file; Any files that match the criteria below will be ignored when a commit is made for this application.
+
+log
+.DS_Store
+tmp
+cache
+nbproject

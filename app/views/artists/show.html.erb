@@ -1,0 +1,9 @@
+<span class="breadcrumbs"><%= link_to 'All', audio_files_path %> &gt; </span>
+
+<h1><%=@artist.name%></h1>
+
+<%=render(:partial=>'audio_files/songs', :object=>@artist.audio_files, :locals=>{:hide=>[:artist]})%>
+
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', audio_files_path %>

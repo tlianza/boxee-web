@@ -1,0 +1,19 @@
+<h1>Listing artists</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @artists.each do |artist| %>
+  <tr>
+    <td>
+		<%= link_to artist, artist %>
+		<%artist.albums.each do |album|%>
+			<br /><span class="smaller">&nbsp;&nbsp;<%=link_to album, album%></span>
+		<%end%>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />

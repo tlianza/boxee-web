@@ -1,0 +1,11 @@
+<h1 title="<%=@media_share.path%>"><%=@media_share%></h1>
+<%if !@dir.blank?%>
+<span class="breadcrumbs"><%= link_to @media_share, @media_share %> &gt; <%=@dir%></span>
+<%end%>
+
+<br />Type: <%=@media_share.type%>
+
+<div style="position:relative">
+<%=render(:partial=>'directory', :collection=>@directories)%>
+<%=render(:partial=>'file', :collection=>@files)%>
+</div>

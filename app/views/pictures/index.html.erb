@@ -1,0 +1,12 @@
+<h1>Listing pictures</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @picture_folders.each do |picture_folder| %>
+  <tr>
+    <td><%= link_to picture_folder, picture_folder %></td>
+  </tr>
+<% end %>
+</table>

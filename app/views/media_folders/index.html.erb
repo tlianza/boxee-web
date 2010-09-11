@@ -1,0 +1,28 @@
+<h1>Files and Folders</h1>
+
+(These are imported automatically via <%=link_to 'media shares', media_shares_path%>.)
+
+<table>
+  <tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Status</th>
+	<th>Metadata?</th>
+	<th>Needs Rescan?</th>
+  </tr>
+
+<% @media_folders.each do |media_folder| %>
+  <tr>
+    <td><%= link_to media_folder, media_folder %>
+		<%media_folder.video_files.each do |video_file|%>
+			<br /><span class="smaller">&nbsp;&nbsp;<%=video_file%></span>
+		<%end%>
+	</td>
+	<td><%=media_folder.folder_type%></td>
+	<td><%=media_folder.status%></td>
+	<td><%=media_folder.has_metadata?%></td>
+	<td><%=media_folder.needs_rescan?%></td>
+  </tr>
+<% end %>
+</table>
+

@@ -1,0 +1,15 @@
+<h1>Media Shares</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @media_shares.each do |media_share| %>
+  <tr>
+    <td><%= link_to media_share, media_share %></td>
+	<td><%=media_share.type%></td>
+    <td><%= link_to 'Edit', edit_media_share_path(media_share) %></td>
+    <td><%= link_to 'Destroy', media_share, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

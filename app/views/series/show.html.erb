@@ -1,0 +1,6 @@
+<span class="breadcrumbs"><%= link_to 'All', :controller=>:tv_shows %> &gt; </span>
+
+<h1><%=@series%></h1>
+<%=render(:partial=>'tv_shows/shows', :object=>@series.video_files, :locals=>{:hide=>[:series]})%>
+
+<%= link_to 'Back', :controller=>:tv_shows %>

@@ -1,0 +1,14 @@
+<%
+_css_class='medbox' 
+_css_class = css_class if defined?css_class
+%>
+<div class="file <%=_css_class%>">
+	<a href="<%=url_for(:action=>:view, :id=>@media_share.id, :name=>file)%>">
+<%if @media_share.is_picture_share?%>
+<img class="<%=_css_class%>" src="<%=url_for(:action=>:view, :id=>@media_share.id, :name=>file)%>" border="0">
+<%else%>
+<%=file%>
+<%end%>
+		
+		</a>
+</div>

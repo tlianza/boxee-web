@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Boxee Web: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+</head>
+<body>
+<ol id="topmenu">
+	<li><%=link_to 'Photos', :controller=>:pictures%></li>
+	<li><%=link_to 'Music', :controller=>:audio_files%></li>
+	<li><%=link_to 'Movies', :controller=>:movies%></li>
+	<li><%=link_to 'TV', :controller=>:tv_shows%></li>
+	<li><%=link_to 'Files', :controller=>:media_folders%></li>
+</ol>
+	
+<p style="color: green"><%= notice %></p>
+
+<%= yield %>
+
+</body>
+</html>
+
+

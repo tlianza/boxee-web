@@ -1,0 +1,25 @@
+<%
+  hide_artist = (defined?hide and hide.include?(:artist))
+  hide_album  = (defined?hide and hide.include?(:album))
+%>
+<table>
+  <tr>
+	<th>Title</th>
+	<th>Duration</th>
+	<%if !hide_artist%><th>Artist</th><%end%>
+	<%if !hide_album%><th>Album</th><%end%>
+  </tr>
+
+<% songs.each do |song| %>
+  <tr>
+		<td><%= link_to song.title, song %></td>
+		<td><%= song.duration_str %></td>
+	<%if !hide_artist%>
+		<td><%= link_to song.artist, song.artist%></td>
+	<%end%>
+	<%if !hide_album%>
+		<td><%= link_to song.album, song.album %></td>
+	<%end%>
+  </tr>
+<% end %>
+</table>

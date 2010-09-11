@@ -1,0 +1,15 @@
+<%
+  hide_series = (defined?hide and hide.include?(:series))
+%>
+<table>
+<%shows.each do |show|%>
+<tr>
+	<%unless hide_series%>
+	<td><%=link_to show.series, show.series%></td>
+	<%end%>
+	<td><%=show.season_and_episode%></td>
+	<td><%=show.title%></td>
+	<td class="smaller"><%=show.description%></td>
+</tr>
+<%end%>
+</table>

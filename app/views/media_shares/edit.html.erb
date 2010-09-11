@@ -1,0 +1,12 @@
+<h1>Editing media_share</h1>
+
+<% form_for(@media_share) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @media_share %> |
+<%= link_to 'Back', media_shares_path %>

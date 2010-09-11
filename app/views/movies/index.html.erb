@@ -1,0 +1,13 @@
+<h1>Movies</h1>
+<table>
+<%@videos.each do |movie|%>
+<tr>
+	<td><%=link_to movie.title, {:action=>:show, :id=>movie.id}, {:title=>movie.tag_line}%></td>
+	<td><%=movie.rating%></td>
+	<td><%=movie.release_date%></td>
+	<td><%=movie.genre%></td>
+	<td class="smaller"><%=movie.description%>
+	</td>
+</tr>
+<%end%>
+</table>
