@@ -5,7 +5,11 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Boxee Web: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'prototype', 'effects', 'controls', 'ext/ext-base', 'ext/ext-all', 'ext/bufferview', :cache=>'all' %>
+  <%= stylesheet_link_tag 'application' %> 
+  <!-- this should not be cached, because it includes background images, which expect a certain (relative) path to images -->
+  <%= stylesheet_link_tag 'ext/resources/css/ext-all', 'ext/ext-grid' %> 
+
 </head>
 <body>
 <ol id="topmenu">

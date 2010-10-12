@@ -17,3 +17,23 @@ iframe.file { padding: 0;}
 .medbox  {max-width: 200px; max-height: 200px; border:0;}
  .file.medbox {width: 200px; height: 200px;}
  iframe.medbox { height: 200px;}
+
+
+/* Ext styles */
+.x-grid3-td-topic b {
+    font-family:tahoma, verdana;
+    display:block;
+	overflow:hidden;
+	width:98%;
+	text-overflow:ellipsis;
+}
+.x-grid3-td-topic b i {
+    font-weight:normal;
+    font-style: normal;
+    color:#000;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.x-grid3-td-topic .x-grid3-cell-inner {
+    white-space: nowrap;
+}
